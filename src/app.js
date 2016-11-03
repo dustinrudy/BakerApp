@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory, hashHistory } from 'react-router';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+// Styles 
+
+import Styles from 'assets/styles/style.css'
+import Normalize from 'assets/styles/normalize.css'
+
 // Layouts
 import App from 'layouts/app';
 // UI
