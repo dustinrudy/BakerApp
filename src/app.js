@@ -12,13 +12,16 @@ import Normalize from 'assets/styles/normalize.css'
 import App from 'layouts/app';
 // UI
 import Home from 'ui/home'
+import AddRecipe from 'ui/addrecipe'
+import Recipe from 'ui/recipe'
 
 ReactDOM.render((
 <MuiThemeProvider>
   <Router history={hashHistory}>
     <Route component={App}>
     <Route component={Home} path="/"/>
-      
+    <Route component={AddRecipe} path="/addrecipe"/>
+    <Route component={Recipe} path="/recipe/:id"/>
     </Route>
   </Router>
  </MuiThemeProvider>

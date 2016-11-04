@@ -63,3 +63,155 @@ h3 {
 	height: 200px;
 	overflow: hidden;
 }
+
+.createRecipe{
+   	width: 520px;
+    float: left;
+    margin-left: 260px;
+    
+}
+
+#basic_info {
+	font-family: 'Lora', serif;
+	font-size: 30px;
+}
+
+#image{
+    width: 150px;
+    height: 150px;
+    float: left;
+    outline: none;
+    border-radius: 3px;
+    text-align: center;
+}
+#name{
+    width: 300px;
+    height: 45px;
+    margin: 0 0 15px 20px;
+    outline: none;
+}
+#creator{
+    width: 300px;
+    height: 45px;
+    margin: 0 0 15px 20px;
+    outline: none;
+}
+#scope{
+    margin: 0 0 15px 20px;
+}
+#mealType{
+    width: 150px;
+    height: 45px;
+    margin: 20px 15px 15px 0;
+    outline: none;
+}
+#prep_Time{
+    width: 80px;
+    height: 45px;
+    margin: 0 0 15px 5px;
+    outline: none;
+}
+#cook_Time{
+    width: 80px;
+    height: 45px;
+    margin: 0 0 15px 5px;
+    outline: none;
+}
+#cook_Temp{
+    width: 80px;
+    height: 45px;
+    margin: 0 0 15px 5px;
+    outline: none;
+}
+#degree_Units{
+    width:50px;
+    height: 45px;
+    margin-left: 5px;
+}
+#portion{
+    width: 60px;
+    height: 45px;
+    margin: 0 0 0 15px;
+}
+.make{
+    float:left;
+}
+#portion_Type{
+    width: 240px;
+    height: 45px;
+    margin: 0 0 0 6px;
+}
+#amount_Units{
+    width: 60px;
+    height: 45px;
+    margin: 0 0 15px 6px;
+}
+#units{
+    width: 80px;
+    height: 45px;
+    margin: 0 0 15px 6px;
+}
+#ingredient{
+    width: 248px;
+    height: 45px;
+    margin: 0 0 15px 6px;
+}
+#decrease{
+    width: 45px;
+    height: 45px;
+    margin: 0 0 15px 6px;
+}
+#increase{
+    width: 45px;
+    height: 45px;
+    margin: 0 0 15px 6px;
+}
+#directions{
+    width: 476px;
+    height: 100px;
+    outline: none;
+}
+#addStep{
+    width: 100px;
+    height: 45px;
+    float: right;
+}
+.personal{
+    margin-top: 50px;
+}
+#personalNotes{
+    width: 476px;
+    height: 100px;
+    outline: none;
+}
+#submit{
+	margin-bottom: 10px;
+	margin-top: 10px;
+    float: right;
+	display: inline-block;
+	color: white;
+	background-color: green;
+	border-bottom: 2px solid darkgreen;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-radius: 5px;
+	width: 100px;
+	outline: none;
+}
+
+.cancel {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 260px;
+	display: inline-block;
+	color: white;
+	background-color: red;
+	border-bottom: 2px solid maroon;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-radius: 5px;
+	width: 100px;
+	outline: none;
+}

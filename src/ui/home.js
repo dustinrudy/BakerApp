@@ -33,7 +33,7 @@ const Home = React.createClass({
 	render: function () {
 		return (
 			<div>
-				<div className="recipes">Add Recipe</div>
+				<Link to="/addrecipe/"><div className="recipes">Add Recipe</div></Link>
 				{this.props.recipes.map(recipe => {
 					return (
 						<div className="recipes">
@@ -44,9 +44,11 @@ const Home = React.createClass({
 				)}
 				{this.props.recipes.map(recipe => {
 					return (
-						<div className="recipes">
-						<img className="coverphoto" src={recipe.image}/>
-						<p>{recipe.name}</p>
+						<div key={recipe.image}>
+							<Link to={"/recipe/" + recipe.id}><div className="recipes">
+							<img className="coverphoto" src={recipe.image}/>
+							<p>{recipe.name}</p>
+							</div></Link>
 						</div>
 					)}
 				)}
