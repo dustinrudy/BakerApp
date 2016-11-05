@@ -3,6 +3,8 @@ import { Link, hashHistory} from 'react-router';
 import {getRecipes} from 'api/api'
 import store from 'store'
 
+import fontawesome from 'assets/font-awesome/css/font-awesome.css'
+
 const homeContainer = React.createClass({
 	getInitialState: function() {
 		return {
@@ -33,7 +35,7 @@ const Home = React.createClass({
 	render: function () {
 		return (
 			<div className="container_home">
-				<Link to="/addrecipe/"><div className="recipes">Add Recipe</div></Link>
+				<Link to="/addrecipe/"><div className="recipes_add"><p className="add_text">Add Recipe</p><i className="fa fa-plus" aria-hidden="true"></i></div></Link>
 				{this.props.recipes.map(recipe => {
 					return (
 					<div key={recipe.image}>
