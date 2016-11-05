@@ -72,7 +72,7 @@ const RecipeProfile = React.createClass({
 									<th>{this.props.recipe.portion}{this.props.recipe.portion_Type}</th>
 									<th><button>Adjust</button></th>
 								</tr>
-							
+
 								<tr>
 									<td>{this.props.recipe.amount_Units}{this.props.recipe.units}</td>
 									<td>{this.props.recipe.ingredient}</td>

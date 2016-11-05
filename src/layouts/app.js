@@ -6,7 +6,7 @@ export default React.createClass({
     return (
       <div className="app">
         <div className="header_home">
-        <h3>The kitchen is yours, chefs!</h3>
+        <h3 className="quote">The kitchen is yours, chefs!</h3>
           Batch Maker
           <ul className="header_ul">
             <li className="icons_header"></li>

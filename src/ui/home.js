@@ -32,14 +32,16 @@ const homeContainer = React.createClass({
 const Home = React.createClass({
 	render: function () {
 		return (
-			<div>
+			<div className="container_home">
 				<Link to="/addrecipe/"><div className="recipes">Add Recipe</div></Link>
 				{this.props.recipes.map(recipe => {
 					return (
-						<div className="recipes">
+					<div key={recipe.image}>
+						<Link to={"/recipe/" + recipe.id}><div className="recipes">
 						<img className="coverphoto" src={recipe.image}/>
 						<p>{recipe.name}</p>
-						</div>
+						</div></Link>
+					</div>
 					)}
 				)}
 				{this.props.recipes.map(recipe => {

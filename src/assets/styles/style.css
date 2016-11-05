@@ -2,25 +2,37 @@ html {box-sizing: border-box;}
 
 *, *:after, *:before {box-sizing: inherit;}
 
+.container_home {
+	width: 500px;
+	display: inline-block;
+	margin-left: 50px;
+}
 
+.quote {
+	margin-top: 0px;
+	float: left;
+	font-size: 12px;
+	font-family: cursive;
+	padding-left: 10px;
+
+}
 .header_home {
 	width: 100%;
-	height: 100px;
-	background-color: red;
-	color: white;
-	text-align: center;
+    height: 100px;
+    background-color: #a50005;
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Lora';
+    padding-top: 25px;
+
 }
 
 .sidebar_nav {
 	width: 250px;
 	height: 500px;
-	background-color: #ccc;
+	background-color: #34373d;
 	color: #000;
-	float: left;
-}
-
-h3 {
-	margin-top: 0px;
 	float: left;
 }
 
@@ -31,15 +43,37 @@ h3 {
 
 .sidebar_nav_list {
 	list-style: none;
-	font-size: 22px;
 	text-align: center;
-	margin-top: 0px;
+	margin-top: 10px;
 }
 
 .sidebar_nav_list > li {
-	border-bottom: 1px solid #000;
+	padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 22px;
+    font-family: 'Droid Serif', serif;
+    color: white;
+    text-align: center;
+    margin-right: 281px;
+    transition: 1s;
+    width: 160px;
+
+}
+
+.sidebar_nav_list > li:hover {
+	border-bottom: 3px solid #fff;
+	border-top: 3px solid #fff;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	font-size: 22px;
+	font-family: 'Droid Serif', serif;
+	color: white;
+	text-align: center;
+	margin-right: 281px;
+	transition: 1s; 
+	border-radius: 40px;
+	width: 160px;
+
 }
 
 .recipes_add {
@@ -83,106 +117,155 @@ h3 {
     outline: none;
     border-radius: 3px;
     text-align: center;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #name{
     width: 300px;
     height: 45px;
     margin: 0 0 15px 20px;
     outline: none;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #creator{
     width: 300px;
     height: 45px;
     margin: 0 0 15px 20px;
     outline: none;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #scope{
     margin: 0 0 15px 20px;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #mealType{
     width: 150px;
     height: 45px;
     margin: 20px 15px 15px 0;
     outline: none;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #prep_Time{
     width: 80px;
     height: 45px;
     margin: 0 0 15px 5px;
     outline: none;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #cook_Time{
     width: 80px;
     height: 45px;
     margin: 0 0 15px 5px;
     outline: none;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #cook_Temp{
     width: 80px;
     height: 45px;
     margin: 0 0 15px 5px;
     outline: none;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #degree_Units{
     width:50px;
     height: 45px;
     margin-left: 5px;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #portion{
-    width: 60px;
+    width: 73px;
     height: 45px;
-    margin: 0 0 0 15px;
+    margin: 0 0 0 10px;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
+    outline: none;
 }
 .make{
     float:left;
 }
 #portion_Type{
-    width: 240px;
+	width: 225px;
     height: 45px;
     margin: 0 0 0 6px;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
+    outline: none;
 }
 #amount_Units{
     width: 60px;
     height: 45px;
     margin: 0 0 15px 6px;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #units{
     width: 80px;
     height: 45px;
     margin: 0 0 15px 6px;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #ingredient{
     width: 248px;
     height: 45px;
     margin: 0 0 15px 6px;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #decrease{
     width: 45px;
     height: 45px;
     margin: 0 0 15px 6px;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #increase{
     width: 45px;
     height: 45px;
     margin: 0 0 15px 6px;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #directions{
     width: 476px;
     height: 100px;
     outline: none;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
+}
+
+.step {
+	font-size: 22px;
+	font-family: 'Lora', serif;
 }
 #addStep{
+    margin-right: 40px;
     width: 100px;
     height: 45px;
     float: right;
+    font-family: 'Lora', serif;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 .personal{
     margin-top: 50px;
+    font-family: 'Lora', serif;
+    font-size: 22px;
 }
 #personalNotes{
     width: 476px;
     height: 100px;
     outline: none;
+    font-family: 'Droid Serif', serif;
+    border-radius: 5px;
 }
 #submit{
 	margin-bottom: 10px;
@@ -198,6 +281,7 @@ h3 {
 	border-radius: 5px;
 	width: 100px;
 	outline: none;
+	font-family: 'Lora', serif;
 }
 
 .cancel {
@@ -214,4 +298,5 @@ h3 {
 	border-radius: 5px;
 	width: 100px;
 	outline: none;
+	font-family: 'Lora', serif;
 }
