@@ -33,7 +33,7 @@ const RecipeContainer = React.createClass({
 			this.unsubscribe = store.subscribe(()=>{
 				const appState = store.getState()
 					this.setState({
-						recipe: appState.currentRecipe
+						recipe: appState.recipe
 			})
 		})
 	},

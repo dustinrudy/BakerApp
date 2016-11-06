@@ -15,13 +15,14 @@ export function getRecipes() {
 
 export function getRecipe(Id) {
 	return axios.get('recipe/' + Id).then(resp => {
-		console.log(resp)
 		store.dispatch({
 			type: 'GET_RECIPE',
 			recipes: resp.data
-		})
-	})
+		}) 
+	}) 
 }
+
+
 
 export function addRecipe(obj) {
 	return axios.post('/recipes', obj).then(resp =>{
