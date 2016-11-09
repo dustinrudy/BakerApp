@@ -14,31 +14,25 @@
       "degree_Units": "F",
       "portion": 36,
       "portion_Type": "cookies",
-      "instructions": [
+      "personalNotes": "This recipe sucks"
+    }
+  ],
+  "instructions": [
         {
           "stepId": 1,
-          "auis": [
-            {
-              "amount_Units": "3/4",
-              "units": "cup",
-              "ingredient": "unsalted butter"
-            }
-          ],
-          "directions": "Heat oven to 375 degrees F"
+          "amount_Units": "3/4",
+          "units": "cup",
+          "ingredient": "unsalted butter",
+          "directions": "Heat oven to 375 degrees F",
+          "recipeId": 1
         },
         {
           "stepId": 2,
-          "auis": [
-            {
-              "amount_Units": "3/4",
-              "units": "cup",
-              "ingredients": "brown sugar"
-            }
-          ],
-          "directions": "In a large bowl mix ingredients ...."
+          "amount_Units": "3/4",
+          "units": "cup",
+          "ingredients": "brown sugar",
+          "directions": "In a large bowl mix ingredients ....",
+          "recipeId": 1
         }
-      ],
-      "personalNotes": "This recipe sucks"
-    }
-  ]
+      ]
 }

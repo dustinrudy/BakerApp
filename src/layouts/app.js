@@ -7,11 +7,17 @@ export default React.createClass({
       <div className="app">
         <div className="header_home">
         <h3 className="quote">The kitchen is yours, chefs!</h3>
-          Batch Maker
+          <p id="batchmaker">Batch Maker</p>
           <ul className="header_ul">
-            <li className="icons_header"></li>
-            <li className="icons_header"></li>
-            <li className="icons_header"></li>
+            <Link to="/addrecipe/"><li className="icons_header">
+              <button className="button_icons" type="button"><i className="fa fa-plus" aria-hidden="true"></i></button>
+            </li></Link>
+            <li className="icons_header">
+              <button className="button_icons" type="button"><i className="fa fa-cog" aria-hidden="true"></i></button>
+            </li>
+            <li className="icons_header">
+              <button className="button_icons" type="button"><i className="fa fa-user" aria-hidden="true"></i></button>
+            </li>
           </ul>
         </div>
         <div className="sidebar_nav">

@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link, hashHistory} from 'react-router'
-import {getRecipe} from 'api/api'
+import {getRecipe, getSteps} from 'api/api'
 import store from 'store'
 
 
@@ -8,32 +8,30 @@ const RecipeContainer = React.createClass({
 	getInitialState: function(){
 		return{
 			recipe: {
-				"name":"",
-				"image":"",
-				"creator":"",
-				"scope":"",
-				"mealType":"",
-				"prep_Time":"",
-				"cook_Time":"",
-				"cook_Temp":"",
-				"degree_Units":"",
-				"portion":"",
-				"portion_Type":"",
-				"amount_Units":"",
-				"units":"",
-				"ingredient":"",
-				"directions":"",
-				"personalNotes":""
+				name:"",
+				image:"",
+				creator:"",
+				scope:"",
+				mealType:"",
+				prep_Time:"",
+				cook_Time:"",
+				cook_Temp:"",
+				degree_Units:"",
+				portion:"",
+				portion_Type:"",
+				personalNotes:""
 			}
 		}
 	},
 	componentWillMount: function(){
 		getRecipe(this.props.params.id)
+		getSteps(this.props.params.id)
 			
 			this.unsubscribe = store.subscribe(()=>{
 				const appState = store.getState()
 					this.setState({
-						recipe: appState.recipe
+						recipe: appState.recipe,
+						instructions: appState.instructions
 			})
 		})
 	},
@@ -60,7 +58,7 @@ const RecipeProfile = React.createClass({
 					</div>
 						<div className="profile" >
 							<h1>{this.props.recipe.name}</h1>
-							<img className="singleRecipe" src={this.props.recipe.url}/>
+							<img className="singleRecipe" src={this.props.recipe.image}/>
 							<div className="bar"><p>Recipe Type</p><p>{this.props.recipe.mealType}</p></div>
 							<div className="bar"><p>Prep Time</p><p>{this.props.recipe.prep_Time}</p></div>
 							<div className="bar"><p>Cook Time</p><p>{this.props.recipe.cook_Time}</p></div>
@@ -74,31 +72,31 @@ const RecipeProfile = React.createClass({
 								</tr>
 
 								<tr>
-									<td>{this.props.recipe.amount_Units}{this.props.recipe.units}</td>
-									<td>{this.props.recipe.ingredient}</td>
+									<td>{this.props.instructions.amount_Units}{this.props.instructions.units}</td>
+									<td>{this.props.recipe.ingredients}</td>
 								</tr>
 								<tr>
-									<td>{this.props.recipe.amount_Units}{this.props.recipe.units}</td>
-									<td>{this.props.recipe.ingredient}</td>
+									<td>{this.props.instructions.amount_Units}{this.props.instructions.units}</td>
+									<td>{this.props.instructions.ingredients}</td>
 								</tr>
 								<tr>
-									<td>{this.props.recipe.amount_Units}{this.props.recipe.units}</td>
-									<td>{this.props.recipe.ingredient}</td>
+									<td>{this.props.instructions.amount_Units}{this.props.instructions.units}</td>
+									<td>{this.props.instructions.ingredients}</td>
 								</tr>
 								<tr>
-									<td>{this.props.recipe.amount_Units}{this.props.recipe.units}</td>
-									<td>{this.props.recipe.ingredient}</td>
+									<td>{this.props.instructions.amount_Units}{this.props.instructions.units}</td>
+									<td>{this.props.instructions.ingredients}</td>
 								</tr>
 							</tbody>
 							</table>
 							<p>Step 1</p>
-							<p>{this.props.recipe.directions}</p>
-							<div>{this.props.recipe.amount_Units}{this.props.recipe.units}</div>
-							<div>{this.props.recipe.amount_Units}{this.props.recipe.units}</div>
-							<div>{this.props.recipe.amount_Units}{this.props.recipe.units}</div>
-							<div>{this.props.recipe.ingredient}</div>
-							<div>{this.props.recipe.ingredient}</div>
-							<div>{this.props.recipe.ingredient}</div>
+							<p>{this.props.instructions.directions}</p>
+							<div>{this.props.instructions.amount_Units}{this.props.instructions.units}</div>
+							<div>{this.props.instructions.amount_Units}{this.props.instructions.units}</div>
+							<div>{this.props.instructions.amount_Units}{this.props.instructions.units}</div>
+							<div>{this.props.instructions.ingredients}</div>
+							<div>{this.props.instructions.ingredients}</div>
+							<div>{this.props.instructions.ingredients}</div>
 							<p>Personal Notes</p>
 							<p>{this.props.recipe.personalNotes}</p>
 							<p>Edit this recipe</p>

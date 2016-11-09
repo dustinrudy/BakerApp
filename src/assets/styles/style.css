@@ -4,7 +4,7 @@ html {box-sizing: border-box;}
 
 .container_home {
 	width: 500px;
-	display: inline-block;
+	display: flex;
 	margin-left: 50px;
 }
 
@@ -16,6 +16,30 @@ html {box-sizing: border-box;}
 	padding-left: 10px;
 
 }
+
+.button_icons {
+   width: 100px;
+   height: 100px;
+   color: white;
+   border: none;
+   box-shadow: none;
+   background: none;
+   margin-right: 10px;
+   transition: .5s;
+   outline: none;
+}
+
+.button_icons:active {
+   width: 100px;
+   height: 100px;
+   color: white;
+   border: none;
+   box-shadow: none;
+   background: none;
+   margin-right: 10px;
+   transition: .5s;
+}
+
 .header_home {
 	width: 100%;
     height: 100px;
@@ -27,7 +51,10 @@ html {box-sizing: border-box;}
     padding-top: 25px;
 
 }
+#batchmaker {
+    margin: 0px;
 
+}
 .sidebar_nav {
 	width: 250px;
 	height: 500px;
@@ -37,8 +64,13 @@ html {box-sizing: border-box;}
 }
 
 .header_ul {
-	list-style: none;
-	padding-left: 0px;
+	right: 0;
+    top: -40px;
+    position: absolute;
+    list-style: none;
+    padding-left: 0px;
+    display: inline-flex;
+    float: right;
 }
 
 .sidebar_nav_list {
@@ -77,22 +109,22 @@ html {box-sizing: border-box;}
 }
 
 i.fa.fa-plus::before {
-	color: white;
     text-decoration: none;
     font-size: 44px;
     text-align: center;
-    margin-left: 80px;
     line-height: 0px;
 }
 
 .recipes_add {
 	border: 3px solid #ccc;
+    color: white;
 	width: 200px;
 	height: 200px;
 	display: inline-block;
 	margin: 10px;
 	background-color: #a50005;
 	transition: 0.5s;
+    text-align: center;
 }
 
 .recipes_add:hover {
@@ -103,6 +135,8 @@ i.fa.fa-plus::before {
 	margin: 10px;
 	background-color: #ff4f6c;
 	color: #a50005;
+    text-decoration-color: white;
+    text-align: center;
 }
 
 .add_text {
@@ -117,7 +151,6 @@ i.fa.fa-plus::before {
 	border: 3px solid #ccc;
 	width: 200px;
 	height: 200px;
-	display: inline-block;
 	margin: 10px;
 }
 
@@ -328,4 +361,19 @@ i.fa.fa-plus::before {
 	width: 100px;
 	outline: none;
 	font-family: 'Lora', serif;
+}
+
+.profile {
+    width: 500px;
+    display: inline-block;
+    margin-left: 500px;
+}
+
+.filter_label {
+    display: inline-block;
+}
+
+.coverphoto_container {
+    width: 200px;
+    height: 200px;
 }

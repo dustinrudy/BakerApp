@@ -13,19 +13,34 @@ export function getRecipes() {
 	})
 }
 
-export function getRecipe(Id) {
-	return axios.get('recipe/' + Id).then(resp => {
+export function getSteps() {
+	return axios.get("instructions").then(resp => {
+		store.dispatch({
+			type: 'GET_INSTRUCTIONS',
+			instructions: resp.data
+		})
+	}) 
+}
+
+export function addSteps(obj, id) {
+	return axios.post("instructions", obj).then(resp => {
+		
+	})
+}
+
+export function getRecipe(id) {
+	return axios.get('recipes/' + id).then(resp => {
 		store.dispatch({
 			type: 'GET_RECIPE',
-			recipes: resp.data
+			recipe: resp.data
 		}) 
 	}) 
 }
 
 
 
-export function addRecipe(obj) {
-	return axios.post('/recipes', obj).then(resp =>{
+export function addRecipe(obj, id) {
+	return axios.post('recipes', obj).then(resp =>{
 		hashHistory.push(`/recipes/${id}`)
 	})
 }
