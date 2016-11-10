@@ -366,7 +366,7 @@ i.fa.fa-plus::before {
 .profile {
     width: 500px;
     display: inline-block;
-    margin-left: 500px;
+    margin-left: 280px;
 }
 
 .filter_label {
@@ -375,5 +375,10 @@ i.fa.fa-plus::before {
 
 .coverphoto_container {
     width: 200px;
+    height: 200px;
+}
+
+.singleRecipe {
+    width: 500px;
     height: 200px;
 }

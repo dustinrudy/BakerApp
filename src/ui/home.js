@@ -35,7 +35,6 @@ const Home = React.createClass({
 	render: function () {
 		return (
 			<div className="container_home">
-				<div className="filter_label">My Recipes</div>
 				<Link to="/addrecipe/"><div className="recipes_add"><p className="add_text">Add Recipe</p><i className="fa fa-plus" aria-hidden="true"></i></div></Link>
 				{this.props.recipes.map(recipe => {
 					return (

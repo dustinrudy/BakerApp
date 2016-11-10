@@ -13,18 +13,27 @@ export function getRecipes() {
 	})
 }
 
-export function getSteps() {
-	return axios.get("instructions").then(resp => {
+export function getIngredients() {
+	return axios.get("ingredients").then(resp => {
 		store.dispatch({
-			type: 'GET_INSTRUCTIONS',
-			instructions: resp.data
+			type: 'GET_INGREDIENTS',
+			ingredients: resp.data
 		})
 	}) 
 }
 
-export function addSteps(obj, id) {
-	return axios.post("instructions", obj).then(resp => {
-		
+export function getInstructions() {
+	return axios.get("instructions").then(resp => {
+		store.dispatch({
+			type: 'GET_INSTRUCTIONS',
+			ingredients: resp.data
+		})
+	}) 
+}
+
+export function addIngredients(obj, id) {
+	return axios.post("ingredients", obj).then(resp => {
+
 	})
 }
 

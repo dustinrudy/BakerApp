@@ -1,4 +1,4 @@
-mport React from 'react'
+import React from 'react'
 import {Link, hashHistory} from 'react-router'
 import store from 'store'
 import {addRecipe} from 'api/api'

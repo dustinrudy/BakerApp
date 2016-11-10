@@ -25,13 +25,11 @@ const RecipeContainer = React.createClass({
 	},
 	componentWillMount: function(){
 		getRecipe(this.props.params.id)
-		getSteps(this.props.params.id)
 			
 			this.unsubscribe = store.subscribe(()=>{
 				const appState = store.getState()
 					this.setState({
 						recipe: appState.recipe,
-						instructions: appState.instructions
 			})
 		})
 	},
@@ -71,32 +69,9 @@ const RecipeProfile = React.createClass({
 									<th><button>Adjust</button></th>
 								</tr>
 
-								<tr>
-									<td>{this.props.instructions.amount_Units}{this.props.instructions.units}</td>
-									<td>{this.props.recipe.ingredients}</td>
-								</tr>
-								<tr>
-									<td>{this.props.instructions.amount_Units}{this.props.instructions.units}</td>
-									<td>{this.props.instructions.ingredients}</td>
-								</tr>
-								<tr>
-									<td>{this.props.instructions.amount_Units}{this.props.instructions.units}</td>
-									<td>{this.props.instructions.ingredients}</td>
-								</tr>
-								<tr>
-									<td>{this.props.instructions.amount_Units}{this.props.instructions.units}</td>
-									<td>{this.props.instructions.ingredients}</td>
-								</tr>
+								
 							</tbody>
 							</table>
-							<p>Step 1</p>
-							<p>{this.props.instructions.directions}</p>
-							<div>{this.props.instructions.amount_Units}{this.props.instructions.units}</div>
-							<div>{this.props.instructions.amount_Units}{this.props.instructions.units}</div>
-							<div>{this.props.instructions.amount_Units}{this.props.instructions.units}</div>
-							<div>{this.props.instructions.ingredients}</div>
-							<div>{this.props.instructions.ingredients}</div>
-							<div>{this.props.instructions.ingredients}</div>
 							<p>Personal Notes</p>
 							<p>{this.props.recipe.personalNotes}</p>
 							<p>Edit this recipe</p>
