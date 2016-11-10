@@ -2,6 +2,8 @@ import React from 'react'
 import {Link, hashHistory} from 'react-router'
 import store from 'store'
 import {addRecipe} from 'api/api'
+import addInstructions from 'ui/addInstructions'
+import addIngredients from 'ui/addIngredients'
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 
@@ -85,6 +87,7 @@ export default React.createClass({
                         <p className="make">This Recipe Will Make:</p>
                         <input id="portion" onChange={this.update} type="text" value={this.state.portion} placeholder="Amount"></input>
                         <input id="portion_Type" onChange={this.update} type="" value={this.state.portion_Type} placeholder="cookie, loaves, etc"></input>
+                        <addInstructions />
                         <p className="personal">Personal Notes</p>
                         <textarea id="personalNotes" onChange={this.update} rows="4" cols="50" value={this.state.personalNotes}></textarea>
                         <button id ="submit" type="submit">Save</button>

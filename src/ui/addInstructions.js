@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link, hashHistory} from 'react-router'
 import store from 'store'
-import {addRecipe} from 'api/api'
+import {addInstructions} from 'api/api'
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 
