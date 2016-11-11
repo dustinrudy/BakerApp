@@ -39,7 +39,7 @@ const Home = React.createClass({
 				{this.props.recipes.map(recipe => {
 					return (
 					<div className="coverphoto_container" key={recipe.image}>
-						<Link to={"/recipe/" + recipe.id}><div className="recipes">
+						<Link to={"/recipes/" + recipe.id}><div className="recipes">
 						<img className="coverphoto" src={recipe.image}/>
 						<p>{recipe.name}</p>
 						</div></Link>

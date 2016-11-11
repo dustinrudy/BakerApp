@@ -19,7 +19,9 @@ const RecipeContainer = React.createClass({
 				degree_Units:"",
 				portion:"",
 				portion_Type:"",
-				personalNotes:""
+				personalNotes:"",
+        instructions: [],
+        ingredients: []
 			}
 		}
 	},
@@ -30,6 +32,8 @@ const RecipeContainer = React.createClass({
 				const appState = store.getState()
 					this.setState({
 						recipe: appState.recipe,
+            instructions: appState.instructions,
+            ingredients: appState.ingredients
 			})
 		})
 	},
@@ -39,7 +43,7 @@ const RecipeContainer = React.createClass({
 
 	render: function(){
 		return (
-				<RecipeProfile recipe={this.state.recipe} />
+				<RecipeProfile recipe={this.state.recipe} instructions={this.state.instructions} ingredients={this.state.ingredients} />
 			)
 	}
 })
@@ -57,17 +61,29 @@ const RecipeProfile = React.createClass({
 						<div className="profile" >
 							<h1>{this.props.recipe.name}</h1>
 							<img className="singleRecipe" src={this.props.recipe.image}/>
-							<div className="bar"><p>Recipe Type</p><p>{this.props.recipe.mealType}</p></div>
-							<div className="bar"><p>Prep Time</p><p>{this.props.recipe.prep_Time}</p></div>
-							<div className="bar"><p>Cook Time</p><p>{this.props.recipe.cook_Time}</p></div>
-							<div className="bar"><p>Cook Temp</p><p>{this.props.recipe.cook_Temp}</p></div>
+							<div className="bar"><p className="top">Recipe Type</p><p>{this.props.recipe.mealType}</p></div>
+							<div className="bar"><p className="top">Prep Time</p><p>{this.props.recipe.prep_Time}</p></div>
+							<div className="bar"><p className="top">Cook Time</p><p>{this.props.recipe.cook_Time}</p></div>
+							<div className="bar"><p className="top">Cook Temp</p><p>{this.props.recipe.cook_Temp}</p></div>
 
 							<table>
 							<tbody>
 								<tr>
-									<th>{this.props.recipe.portion}{this.props.recipe.portion_Type}</th>
-									<th><button>Adjust</button></th>
+									<td>{this.props.recipe.portion}{this.props.recipe.portion_Type}</td>
+									<td><button>Adjust</button></td>
 								</tr>
+                <tr>
+                  <td>{this.props.ingredients.amount_Units} {this.props.ingredients.units}</td>
+                  <td>{this.props.ingredients.ingredient}</td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                </tr>
 
 								
 							</tbody>

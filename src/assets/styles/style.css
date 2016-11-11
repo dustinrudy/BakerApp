@@ -2,6 +2,33 @@ html {box-sizing: border-box;}
 
 *, *:after, *:before {box-sizing: inherit;}
 
+.sidebar_links {
+    text-decoration: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 22px;
+    font-family: 'Droid Serif', serif;
+    color: white;
+    text-align: center;
+    margin-right: 281px;
+    transition: 1s;
+    width: 160px;
+}
+.sidebar_links:hover {
+    border-bottom: 3px solid #fff;
+    border-top: 3px solid #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 22px;
+    font-family: 'Droid Serif', serif;
+    color: white;
+    text-align: center;
+    margin-right: 281px;
+    transition: 1s; 
+    border-radius: 40px;
+    width: 160px;
+}
+
 .container_home {
 	width: 500px;
 	display: flex;
@@ -269,7 +296,7 @@ i.fa.fa-plus::before {
     border-radius: 5px;
 }
 #units{
-    width: 80px;
+    width: 150px;
     height: 45px;
     margin: 0 0 15px 6px;
     font-family: 'Droid Serif', serif;
@@ -287,14 +314,22 @@ i.fa.fa-plus::before {
     height: 45px;
     margin: 0 0 15px 6px;
     font-family: 'Droid Serif', serif;
-    border-radius: 5px;
+    border-radius: 10px;
+    background-color: #34373d;
+    color: white;
+    text-align: center;
+    font-size: 32px;
 }
 #increase{
     width: 45px;
     height: 45px;
     margin: 0 0 15px 6px;
     font-family: 'Droid Serif', serif;
-    border-radius: 5px;
+    border-radius: 10px;
+    background-color: #34373d;
+    color: white;
+    text-align: center;
+    font-size: 32px;
 }
 #directions{
     width: 476px;
@@ -316,6 +351,26 @@ i.fa.fa-plus::before {
     font-family: 'Lora', serif;
     border-radius: 5px;
     margin-top: 15px;
+    color: white;
+    background-color: #34373d;
+    border: none;
+    transition: 0.5s;
+}
+#addStep:hover{
+    margin-right: 40px;
+    width: 100px;
+    height: 45px;
+    float: right;
+    font-family: 'Lora', serif;
+    border-radius: 5px;
+    margin-top: 15px;
+    color: #34373d;
+    background-color: white;
+    cursor: pointer;
+    border-bottom: 3px solid #34373d;
+    border-top: 3px solid #34373d;
+    transition: 0.5s;
+    border-radius: 40px;
 }
 .personal{
     margin-top: 50px;
@@ -381,4 +436,18 @@ i.fa.fa-plus::before {
 .singleRecipe {
     width: 500px;
     height: 200px;
+}
+
+.bar{
+    margin-top: 10px;
+    width: 125px;
+    height: 127px;
+    overflow: inherit;
+    text-align: center;
+    font-size: 22px;
+    display: inline-table;
+    border: 1px solid #ccc;
+}
+.top{
+    font-size: 14px;
 }

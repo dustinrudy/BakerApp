@@ -2,8 +2,6 @@ import React from 'react'
 import {Link, hashHistory} from 'react-router'
 import store from 'store'
 import {addIngredients} from 'api/api'
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
 
 
 export default React.createClass({
@@ -11,8 +9,7 @@ export default React.createClass({
         return {
             "amount_Units":"",
             "units":"",
-            "ingredient":"",
-            "directions":""
+            "ingredient":""
             
         }
     },
@@ -21,15 +18,14 @@ export default React.createClass({
         var obj = {
             amount_Units: this.state.amount_Units,
             units: this.state.units,
-            ingredient: this.state.ingredient,
-            directions: this.state.directions,
+            ingredient: this.state.ingredient
             
         }
-        addInstructions(obj)
+        addIngredients(obj)
 
     },
 
-    update: function(e){
+    updateIngredients: function(e){
 
         var val = e.target.value
         console.log(val)
@@ -40,13 +36,11 @@ export default React.createClass({
     },
     render: function (){
         return(
-            <div className='add_instructions'>
+            <div className='add_ingredients'>
                
-                <div className="createInstructions">
-                    <form>
-                        <p className="step">Step 1</p>
-                        <input id="amount_Units" onChange={this.update} type="text" value={this.state.amount_Units} placeholder="2"></input>
-                        <select id="units" onChange={this.update} value={this.state.units}>
+                <div className="createIngredients">
+                        <input id="amount_Units" onChange={this.updateIngredients} type="text" value={this.state.amount_Units} placeholder="2"></input>
+                        <select id="units" onChange={this.updateIngredients} value={this.state.units}>
                             <option value="cup">Cup/s</option>
                             <option value="teaspoon">Teaspoon/s</option>
                             <option value="tablespoon">Tablespoon/s</option>
@@ -60,12 +54,7 @@ export default React.createClass({
                             <option value="ounce">Ounce/s</option>
                             <option value="gram">Gram/s</option>
                         </select>
-                        <input id="ingredient" onChange={this.update} type="text" value={this.state.ingredient} placeholder="Ingredient"></input>
-                        <button id="increase" type="button">+</button>
-                        <textarea id="directions" onChange={this.update} rows="4" cols="50" value={this.state.directions} placeholder="What directions go with this step?"/>
-                        <button id="addStep" type="button">Add Step</button>
-                        
-                    </form>
+                        <input id="ingredient" onChange={this.updateIngredients} type="text" value={this.state.ingredient} placeholder="Ingredient"></input>
                 </div>
             </div>
         )

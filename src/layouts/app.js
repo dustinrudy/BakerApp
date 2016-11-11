@@ -22,7 +22,7 @@ export default React.createClass({
         </div>
         <div className="sidebar_nav">
           <ul className="sidebar_nav_list">
-            <li>My Recipes</li>
+            <Link className="sidebar_links" to="/"><li>My Recipes</li></Link>
             <li>Public Recipes</li>
             <li>Popular Recipes</li>
             <li>My Favorite Recipes</li>

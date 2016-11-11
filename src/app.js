@@ -19,6 +19,8 @@ import App from 'layouts/app';
 import Home from 'ui/home'
 import AddRecipe from 'ui/addrecipe'
 import Recipe from 'ui/recipe'
+import AddInstructions from 'ui/addInstructions'
+import AddIngredients from 'ui/addIngredients'
 
 ReactDOM.render((
 <MuiThemeProvider>
@@ -26,7 +28,9 @@ ReactDOM.render((
     <Route component={App}>
     <Route component={Home} path="/"/>
     <Route component={AddRecipe} path="/addrecipe"/>
-    <Route component={Recipe} path="/recipe/:id"/>
+    <Route component={AddIngredients} path="/ingredients"/>
+    <Route component={AddInstructions} path ="/instructions"/>
+    <Route component={Recipe} path="/recipes/:id"/>
     </Route>
   </Router>
  </MuiThemeProvider>
