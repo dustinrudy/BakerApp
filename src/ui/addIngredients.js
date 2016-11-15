@@ -2,9 +2,37 @@ import React from 'react'
 import {Link, hashHistory} from 'react-router'
 import store from 'store'
 import {addIngredients} from 'api/api'
+import {getIngredients} from 'api/api'
 
 
-export default React.createClass({
+const IngredientContainer = React.createClass({
+    getInitialState: function() {
+        return {
+            ingredients: []
+        }   
+    },
+    componentWillMount: function () {
+        this.unsubscribe = store.subscribe(() => {
+            const appState = store.getState()
+            this.setState({
+                ingredients: appState.ingredients
+            })
+        })
+    },
+    componentWillUnmount: function () {
+        this.unsubscribe()
+    },
+    render: function() {
+        return (
+            <IngredientsView instructionId={this.props.params.instructionId} ingredients={this.state.ingredients} />
+        )
+       
+    }
+
+})
+
+
+const IngredientsView = React.createClass({
     getInitialState: function(){
         return {
             "amount_Units":"",
@@ -12,17 +40,6 @@ export default React.createClass({
             "ingredient":""
             
         }
-    },
-    handleSubmit: function (e) {
-        e.preventDefault()
-        var obj = {
-            amount_Units: this.state.amount_Units,
-            units: this.state.units,
-            ingredient: this.state.ingredient
-            
-        }
-        addIngredients(obj)
-
     },
 
     updateIngredients: function(e){
@@ -34,11 +51,28 @@ export default React.createClass({
         stateObj[id] = val
         this.setState(stateObj)
     },
+
+    addIngredient: function(e) {
+        e.preventDefault()
+        var obj = {
+            "amount_Units": this.state.amount_Units,
+            "units": this.state.units,
+            "ingredient": this.state.ingredient,
+            "instructionId": this.props.instructionId
+        }
+        console.log('ingredient obj', obj)
+        addIngredients(obj)
+    },
+
+    deleteIngredient: function(e) {
+
+    },
     render: function (){
         return(
             <div className='add_ingredients'>
-               
+               <p id="basic_info">Add Ingredients</p>
                 <div className="createIngredients">
+                     <div>
                         <input id="amount_Units" onChange={this.updateIngredients} type="text" value={this.state.amount_Units} placeholder="2"></input>
                         <select id="units" onChange={this.updateIngredients} value={this.state.units}>
                             <option value="cup">Cup/s</option>
@@ -55,8 +89,12 @@ export default React.createClass({
                             <option value="gram">Gram/s</option>
                         </select>
                         <input id="ingredient" onChange={this.updateIngredients} type="text" value={this.state.ingredient} placeholder="Ingredient"></input>
+                        <button id="addStep" onClick={this.addIngredient} type="button">Add More Steps</button>
+                    </div>
                 </div>
             </div>
         )
     }
 })
+
+export default IngredientContainer

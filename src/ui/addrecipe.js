@@ -87,7 +87,7 @@ export default React.createClass({
                         <input id="portion_Type" onChange={this.update} type="" value={this.state.portion_Type} placeholder="cookie, loaves, etc"></input>
                         <p className="personal">Personal Notes</p>
                         <textarea id="personalNotes" onChange={this.update} rows="4" cols="50" value={this.state.personalNotes}></textarea>
-                        <button id ="submit" type="submit">Save</button>
+                        <button id="submit" type="submit" onClick={this.handleSubmit}>Save</button>
                     	<button className="cancel" onClick={this.goBack}>Cancel</button>
                     </form>
                 </div>

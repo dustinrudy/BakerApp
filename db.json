@@ -79,21 +79,6 @@
       "portion": 6,
       "portion_Type": "servings",
       "personalNotes": "Remember to wear gloves the Frittata is hot"
-    },
-    {
-      "name": "Spaghetti Sauce with Ground Beef",
-      "image": "http://images.media-allrecipes.com/userphotos/560x315/667748.jpg",
-      "creator": "Hank's Mom",
-      "scope": "public",
-      "mealType": "lunch",
-      "prep_Time": "15 min",
-      "cook_Time": "1 hour and 10 min",
-      "cook_Temp": 350,
-      "degree_Units": "",
-      "portion": 8,
-      "portion_Type": "servings",
-      "personalNotes": "Dont' Forget the Sacue!",
-      "id": 6
     }
   ],
   "instructions": [
@@ -129,35 +114,35 @@
       "units": "cup",
       "ingredient": "unsalted butter",
       "amount_Units": "3/4",
-      "instuctionId": 1
+      "instructionId": 1
     },
     {
       "id": 2,
       "units": "cup",
       "ingredient": "unsalted butter",
       "amount_Units": "3/4",
-      "instuctionId": 2
+      "instructionId": 2
     },
     {
       "id": 3,
       "units": "cup",
       "ingredient": "unsalted butter",
       "amount_Units": "3/4",
-      "instuctionId": 3
+      "instructionId": 3
     },
     {
       "id": 4,
       "units": "cup",
       "ingredient": "unsalted butter",
       "amount_Units": "3/4",
-      "instuctionId": 4
+      "instructionId": 4
     },
     {
       "id": 5,
       "units": "cup",
       "ingredient": "unsalted butter",
       "amount_Units": "3/4",
-      "instuctionId": 5
+      "instructionId": 5
     }
   ]
 }

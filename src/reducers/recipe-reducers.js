@@ -13,8 +13,12 @@ export default function(state = defaultState, action){
 			return {...state, recipe: action.recipe}
 		case 'GET_INSTRUCTIONS': 
 			return {...state, instructions: action.instructions}
+		case 'ADD_INSTRUCTION': 
+			return {...state, instruction: action.instruction}
 		case 'GET_INGREDIENTS':
 			return {...state, ingredients: action.ingredients}
+		case 'ADD_INGREDIENT': 
+			return {...state, ingredient: action.ingredient}
 		default: 
 			return state 
 	} 

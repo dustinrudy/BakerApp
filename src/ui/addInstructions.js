@@ -4,24 +4,41 @@ import store from 'store'
 import {addInstructions} from 'api/api'
 
 
-export default React.createClass({
+const InstructionsContainer = React.createClass({
+    getInitialState: function() {
+        return {
+            instructions: []
+        }   
+    },
+    componentWillMount: function () {
+        this.unsubscribe = store.subscribe(() => {
+            const appState = store.getState()
+            this.setState({
+                instructions: appState.instructions
+            })
+        })
+    },
+    componentWillUnmount: function () {
+        this.unsubscribe()
+    },
+    render: function() {
+        return (
+            <InstructionsView recipeId={this.props.params.recipeId} instructions={this.state.instructions} />
+        )
+       
+    }
+
+})
+
+
+const InstructionsView = React.createClass({
     getInitialState: function(){
         return {
-            "directions":""
-            
+            directions: ""
         }
     },
-    handleSubmit: function (e) {
-        e.preventDefault()
-        var obj = {
-            directions: this.state.directions,
-            
-        }
-        addInstructions(obj)
 
-    },
-
-    updateAddInstructions: function(e){
+    updateInstruction: function(e){
 
         var val = e.target.value
         console.log(val)
@@ -30,18 +47,46 @@ export default React.createClass({
         stateObj[id] = val
         this.setState(stateObj)
     },
+
+    addInstruction: function(e) {
+        e.preventDefault()
+        var obj = {
+            directions: this.state.directions,
+            recipeId: this.props.recipeId
+        }
+        addInstructions(obj)
+    },
+
+    deleteIngredient: function(e) {
+
+    },
+    goBack: function (e) {
+        e.preventDefault()
+        hashHistory.push("/")
+    },
     render: function (){
         return(
             <div className='add_instructions'>
                 <div className="createInstructions">
-                        <p className="step">Step 1</p>
-                        <button id="increase" type="button"><i className="fa fa-plus-square" aria-hidden="true"></i></button>
-                        <button id="decrease" type="button"><i className="fa fa-minus-square" aria-hidden="true"></i></button>
-                        <textarea id="directions" onChange={this.updateAddInstructions} rows="4" cols="50" value={this.state.directions} placeholder="What directions go with this steps"/>
-                        <button id="addStep" type="button">Add Step</button>
+                    {this.props.instructions.map((instruction, i) => {
+                        return (
+                    
+                    <div key ={instruction.id}>
+                        <p className="step">Step {i + 1}</p>
+                        <p>{instruction.directions}</p>
+                    </div>
+                        )
+
+                    })}
+                        
+                        <textarea id="directions" onChange={this.updateInstruction} rows="4" cols="50" value={this.state.directions} placeholder="What directions go with this steps"/>
+                        <button id="addStep" onClick={this.addInstruction} type="button">Add Step</button>
+                        <button className="cancel" onClick={this.goBack}>Cancel</button>
                         
                 </div>
             </div>
         )
     }
 })
+
+export default InstructionsContainer

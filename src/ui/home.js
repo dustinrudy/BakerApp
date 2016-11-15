@@ -41,7 +41,7 @@ const Home = React.createClass({
 					<div className="coverphoto_container" key={recipe.image}>
 						<Link to={"/recipes/" + recipe.id}><div className="recipes">
 						<img className="coverphoto" src={recipe.image}/>
-						<p>{recipe.name}</p>
+						<p className="recipeName">{recipe.name}</p>
 						</div></Link>
 					</div>
 					)}
