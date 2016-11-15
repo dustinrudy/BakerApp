@@ -7,6 +7,7 @@ import store from 'store'
 const RecipeContainer = React.createClass({
 	getInitialState: function(){
 		return{
+			id: "",
 			name:"",
 			image:"",
 			creator:"",
@@ -32,6 +33,7 @@ const RecipeContainer = React.createClass({
 		this.unsubscribe = store.subscribe(()=>{
 			const appState = store.getState()
 				this.setState({
+					id: appState.recipe.id,
 					name:appState.recipe.name,
 	        		image:appState.recipe.image,
 	        		creator:appState.recipe.creator,
@@ -56,13 +58,16 @@ const RecipeContainer = React.createClass({
 	
 	render: function(){
 	   console.log('state instructions', this.state.instructions)
-		return (<RecipeProfile {...this.state} />)
+		return (<RecipeProfile {...this.state} recipeId={this.state.id} />)
 		} 
 })
 const RecipeProfile = React.createClass({
 	goBack: function (e) {
 		e.preventDefault()
 		hashHistory.goBack()
+	},
+	nextStep: function(id) {
+		hashHistory.push(`/adjustRecipe/${id}`)
 	},
 	render: function (){
 		return(
@@ -80,7 +85,7 @@ const RecipeProfile = React.createClass({
 							<table>
 								<tbody>
 								<tr>
-									<td colSpan = "2">{this.props.portion}{this.props.portion_Type}<button className="adjust">Adjust</button></td>
+									<td colSpan = "2">{this.props.portion} {this.props.portion_Type}<button className="adjust">Adjust</button></td>
 								</tr>
 			                {this.props.ingredients.map(item =>{
 			                  return (
@@ -118,7 +123,7 @@ const RecipeProfile = React.createClass({
 							</div>
 							<div className="edit">
 							<p>Edit this recipe</p>
-							<button>Start</button>
+							<button onClick={() => this.nextStep(this.props.recipeId)}>Start</button>
 							</div>
 					</div>
 			</div>

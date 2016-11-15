@@ -153,10 +153,11 @@ i.fa.fa-plus::before {
     width: 200px;
     height: 200px;
     display: inline-block;
-    margin: 10px 0 5px 10px;
     background-color: #a50005;
     transition: 0.5s;
     text-align: center;
+    margin-left: 10px;
+    margin-top: 20px;
 }
 .recipes_add:hover {
     border: 3px solid #ccc;
@@ -181,16 +182,16 @@ i.fa.fa-plus::before {
 	border: 3px solid #ccc;
 	width: 200px;
 	height: 200px;
-	margin: 10px;
+	margin: 10px 10px 10px 10px;
 }
 
 .coverphoto {
-	width: 200px;
-	height: 200px;
+	width: 195px;
+	height: 195px;
 	overflow: hidden;
 }
 
-.coverphoto:hover {
+.coverphoto_container:hover .coverphoto {
     opacity: 0.3;
     display: all;
 }
@@ -289,7 +290,7 @@ i.fa.fa-plus::before {
     float:left;
 }
 #portion_Type{
-	width: 225px;
+	width: 220px;
     height: 45px;
     margin: 0 0 0 6px;
     font-family: 'Droid Serif', serif;
@@ -442,7 +443,8 @@ i.fa.fa-plus::before {
 .coverphoto_container {
     width: 200px;
     height: 200px;
-    margin-right: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 .singleRecipe {
@@ -548,12 +550,13 @@ h2{
 
 .recipeName {
     opacity: 0;
-    margin-top: -40px;
-
+    margin-top: -45px;
+    margin-left: 5px;
 }
 
-.recipeName:hover {
-    opacity: 1;
-    margin-top: -40px;
+.coverphoto_container:hover .recipeName {
     color: black;
+    opacity: 1;
 }
+
+

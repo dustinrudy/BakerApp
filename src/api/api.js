@@ -44,7 +44,7 @@ export function getRecipe(id) {
 
 
 
-export function addRecipe(obj, id) {
+export function addRecipe(obj) {
 	return axios.post('recipes', obj).then(resp =>{
 		hashHistory.push("/instructions/" + resp.data.id)
 	})
@@ -57,7 +57,7 @@ export function addInstructions(obj) {
 		// 		type: 'ADD_INSTRUCTION',
 		// 		instruction: resp2.data
 		// 	})
-		hashHistory.push('/ingredients/' + resp.data.id)
+		hashHistory.push('/ingredients/' + obj.recipeId)
 		})
 	} 
 
@@ -68,12 +68,28 @@ export function addIngredients(obj) {
 		// 		type: 'ADD_INGREDIENT',
 		// 		ingredient: resp2.data
 		// 	})
-		hashHistory.push('/instructions/' + resp.data.id)
+		hashHistory.push('/instructions/' + obj.instuctionId)
 		})
 	}
 
 
+export function putRecipe(obj) {
+	return axios.put("recipe", obj).then(resp => {
+		hashHistory.push("/adjustinstructions/" + resp.data.id)
+	})
+}
 
+export function putInstructions(obj) {
+	return axios.put("instructions", obj).then(resp => {
+		hashHistory.push("/adjustingredients/" + resp.data.id)
+	})
+}
+
+export function putIngredients(obj) {
+	return axios.put("ingredients", obj).then(resp => {
+		hashHistory.push("/recipes")
+	})
+}
 
 
 

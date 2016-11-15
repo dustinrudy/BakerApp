@@ -15,6 +15,7 @@ import AddRecipe from 'ui/addrecipe'
 import Recipe from 'ui/recipe'
 import AddInstructions from 'ui/addInstructions'
 import AddIngredients from 'ui/addIngredients'
+import AdjustRecipe from 'ui/adjustRecipe'
 
 ReactDOM.render((
   <Router history={hashHistory}>
@@ -24,6 +25,7 @@ ReactDOM.render((
     <Route component={AddIngredients} path="/ingredients/:instructionId"/>
     <Route component={AddInstructions} path ="/instructions/:recipeId"/>
     <Route component={Recipe} path="/recipes/:id"/>
+    <Route component={AdjustRecipe} path="/adjustRecipe/:id" />
     </Route>
   </Router>
 ), document.getElementById('app'));

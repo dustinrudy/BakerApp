@@ -63,10 +63,10 @@ const IngredientsView = React.createClass({
         console.log('ingredient obj', obj)
         addIngredients(obj)
     },
-
-    deleteIngredient: function(e) {
-
+    goToRecipe: function(id) {
+        hashHistory.push(`/recipes/${id}`)
     },
+    
     render: function (){
         return(
             <div className='add_ingredients'>
@@ -90,6 +90,8 @@ const IngredientsView = React.createClass({
                         </select>
                         <input id="ingredient" onChange={this.updateIngredients} type="text" value={this.state.ingredient} placeholder="Ingredient"></input>
                         <button id="addStep" onClick={this.addIngredient} type="button">Add More Steps</button>
+                        <button id="submit" type="submit" onClick={this.goToRecipe}>Save</button>
+                        <button className="cancel" onClick={this.goBack}>Cancel</button>
                     </div>
                 </div>
             </div>
