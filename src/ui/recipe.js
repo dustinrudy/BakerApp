@@ -76,7 +76,7 @@ const RecipeProfile = React.createClass({
 					<button onClick={this.goBack}>Go Back</button>
 				</div>
 					<div className="profile">
-							<h1>{this.props.name}</h1>
+							<h1 className="heading">{this.props.name}</h1>
 							<img className="singleRecipe" src={this.props.image}/>
 							<div className="bar"><p className="top">Recipe Type</p><p>{this.props.mealType}</p></div>
 							<div className="bar"><p className="top">Prep Time</p><p>{this.props.prep_Time}</p></div>
@@ -85,7 +85,7 @@ const RecipeProfile = React.createClass({
 							<table>
 								<tbody>
 								<tr>
-									<td colSpan = "2">{this.props.portion} {this.props.portion_Type}<button className="adjust">Adjust</button></td>
+									<td colSpan = "2">{this.props.portion} {this.props.portion_Type}<button className="adjust" onClick={() => this.nextStep(this.props.recipeId)}>Adjust</button></td>
 								</tr>
 			                {this.props.ingredients.map(item =>{
 			                  return (
@@ -98,7 +98,7 @@ const RecipeProfile = React.createClass({
 			                })} 
 								</tbody>
 							</table>
-							<h2>Steps</h2>
+							<h2 className="steps_recipe">Steps</h2>
 							{this.props.instructions.map(item =>{
 								return (
 									<p className="steps" key={`inst-${item.id}`}>{item.directions}</p>
@@ -118,12 +118,11 @@ const RecipeProfile = React.createClass({
 								</tbody>
 							</table>
 							<div className="personal">
-							<h3>Personal Notes</h3>
-							<p>{this.props.personalNotes}</p>
+							<h3 className="steps_recipe">Personal Notes</h3>
+							<p className="personal_recipe">{this.props.personalNotes}</p>
 							</div>
 							<div className="edit">
-							<p>Edit this recipe</p>
-							<button onClick={() => this.nextStep(this.props.recipeId)}>Start</button>
+							<button className="edit_button" onClick={() => this.nextStep(this.props.recipeId)}>Edit</button>
 							</div>
 					</div>
 			</div>

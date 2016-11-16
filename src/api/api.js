@@ -68,7 +68,7 @@ export function addIngredients(obj) {
 		// 		type: 'ADD_INGREDIENT',
 		// 		ingredient: resp2.data
 		// 	})
-		hashHistory.push('/instructions/' + obj.instuctionId)
+		hashHistory.push('/instructions/' + resp.data.instructionId)
 		})
 	}
 

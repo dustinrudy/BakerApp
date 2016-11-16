@@ -64,7 +64,7 @@ const IngredientsView = React.createClass({
         addIngredients(obj)
     },
     goToRecipe: function(id) {
-        hashHistory.push(`/recipes/${id}`)
+        hashHistory.push("/recipes/" + id)
     },
     
     render: function (){

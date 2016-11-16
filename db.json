@@ -96,34 +96,19 @@
       "id": 6
     },
     {
-      "name": "Holiday ONLY Mashed Potatoes",
-      "image": "http://images.media-allrecipes.com/userphotos/560x315/2798665.jpg",
-      "creator": "Saltair4",
-      "scope": "public",
+      "name": "Chicken Florentine Casserole",
+      "image": "http://images.media-allrecipes.com/userphotos/560x315/814302.jpg",
+      "creator": "BRYAN0320",
+      "scope": "",
       "mealType": "dinner",
-      "prep_Time": "15 min",
+      "prep_Time": "25 Min",
       "cook_Time": "25 Min",
-      "cook_Temp": "Boil",
-      "degree_Units": "",
-      "portion": 10,
-      "portion_Type": "Servings",
-      "personalNotes": "These mashed potatoes are too fattening to have on a regular basis. I only make these on holidays, and everyone wonders what's in them that's makes them so rich..",
-      "id": 7
-    },
-    {
-      "name": "Creamy Au Gratin Potatoes",
-      "image": "http://images.media-allrecipes.com/userphotos/560x315/738814.jpg",
-      "creator": "CathyM",
-      "scope": "public",
-      "mealType": "lunch",
-      "prep_Time": "30 Min",
-      "cook_Time": "1 hours and 30 Min",
-      "cook_Temp": 400,
+      "cook_Temp": 350,
       "degree_Units": "",
       "portion": 4,
       "portion_Type": "Servings",
-      "personalNotes": "This is my husband's favorite dish, and he considers it a special occasion every time I make it. The creamy cheese sauce and the tender potatoes in this classic French dish combine to make a deliciously addictive experience. It's a great side dish with a roast pork loin or beef tenderloin. Add a green salad and French bread, and you have found the magic path to a man's heart. To avoid lumps in your sauce, add the milk just a little at a time as you stir the flour and butter. Experiment with different cheeses for variety.",
-      "id": 8
+      "personalNotes": "Chicken Florentine casserole, which can also be adapted with either fish or shrimp, lies on a bed of spinach leaves and mushrooms, has a creamy white sauce mixed with garlic, Parmesan cheese, and Italian seasonings, and is topped with baked mozzarella",
+      "id": 7
     }
   ],
   "instructions": [
@@ -173,34 +158,29 @@
       "id": 9
     },
     {
-      "directions": "Place potatoes in a large pot with enough water to cover. Bring to a boil, and cook until fork tender, about 20 minutes. ",
+      "directions": "Preheat oven to 350 degrees F (175 degrees C). Place the chicken breast halves on a baking sheet; bake 20 to 30 minutes, until no longer pink and juices run clear. Remove from heat, and set aside.",
       "recipeId": 7,
       "id": 10
     },
     {
-      "directions": "Drain, add butter, and mash using a potato masher, ricer or mixer. Gradually beat in the heavy cream. Serve hot!",
-      "recipeId": "undefined",
+      "directions": "Increase the oven temperature to 400 degrees F (200 degrees C).",
+      "recipeId": 7,
       "id": 11
     },
     {
-      "directions": "Preheat oven to 400 degrees F (200 degrees C). Butter a 1 quart casserole dish.",
-      "recipeId": 8,
+      "directions": "Melt the butter in a medium saucepan over medium heat. Stirring constantly, mix in the garlic, lemon juice, cream of mushroom soup, Italian seasoning, half-and-half, and Parmesan cheese.",
+      "recipeId": 7,
       "id": 12
     },
     {
-      "directions": "Layer 1/2 of the potatoes into bottom of the prepared casserole dish. Top with the onion slices, and add the remaining potatoes. Season with salt and pepper to taste.",
-      "recipeId": "undefined",
+      "directions": "Arrange the spinach over the bottom of a 9x9 inch baking dish. Cover the spinach with the mushrooms. Pour half the mixture from the saucepan over the mushrooms. Arrange chicken breasts in the dish, and cover with the remaining sauce mixture. Sprinkle with bacon bits, and top with mozzarella cheese.",
+      "recipeId": 7,
       "id": 13
     },
     {
-      "directions": "In a medium-size saucepan, melt butter over medium heat. Mix in the flour and salt, and stir constantly with a whisk for one minute. Stir in milk. Cook until mixture has thickened. Stir in cheese all at once, and continue stirring until melted, about 30 to 60 seconds. Pour cheese over the potatoes, and cover the dish with aluminum foil.",
-      "recipeId": "undefined",
+      "directions": "Bake 20 to 25 minutes in the 400 degrees F (200 degrees C) oven, until bubbly and lightly browned.",
+      "recipeId": 7,
       "id": 14
-    },
-    {
-      "directions": "Bake 1 1/2 hours in the preheated oven.",
-      "recipeId": "undefined",
-      "id": 15
     }
   ],
   "ingredients": [
@@ -261,39 +241,32 @@
       "id": 8
     },
     {
-      "amount_Units": 5,
-      "units": "pound",
-      "ingredient": "Red Potatoes",
+      "amount_Units": 3,
+      "units": "teaspoon",
+      "ingredient": "Minced Garlic",
       "instructionId": 7,
       "id": 9
     },
     {
-      "amount_Units": "1/2",
+      "amount_Units": "2/3",
       "units": "",
-      "ingredient": "Butter",
-      "instructionId": "undefined",
+      "ingredient": "Bacon Bits",
+      "instructionId": 7,
       "id": 10
     },
     {
-      "amount_Units": 3,
-      "units": "tablespoon",
-      "ingredient": " Butter",
-      "instructionId": 8,
+      "amount_Units": "1/4",
+      "units": "",
+      "ingredient": "Butter",
+      "instructionId": 7,
       "id": 11
     },
     {
-      "amount_Units": 2,
-      "units": "",
-      "ingredient": "Milk",
-      "instructionId": "undefined",
+      "amount_Units": 1,
+      "units": "tablespoon",
+      "ingredient": "Lemon Juice",
+      "instructionId": 7,
       "id": 12
-    },
-    {
-      "amount_Units": "1 1/2",
-      "units": "",
-      "ingredient": "Shredded Cheddar cheese",
-      "instructionId": "undefined",
-      "id": 13
     }
   ]
 }
