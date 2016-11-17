@@ -194,6 +194,7 @@ i.fa.fa-plus::before {
 .coverphoto_container:hover .coverphoto {
     opacity: 0.3;
     display: all;
+    transition: 0.5s;
 }
 
 .createRecipe{
@@ -445,6 +446,7 @@ i.fa.fa-plus::before {
     height: 200px;
     margin-right: 10px;
     margin-top: 10px;
+    transition: 0.5s;
 }
 
 .singleRecipe {
@@ -625,6 +627,13 @@ h2{
 .coverphoto_container:hover .recipeName {
     color: black;
     opacity: 1;
+    transition: 0.5s;
 }
 
+i.fa.fa-arrow-circle-left::before {
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #34373D;
+}
 
